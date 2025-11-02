@@ -112,6 +112,11 @@ nav {
 	right: -5px;
 }
 
+.nav__cart-icon .cart__icon-img {
+	width: 20px;
+	height: 20px;
+}
+
 .nav__cart-icon:hover {
 	background-color: var(--color-primary-dark);
 	transform: scale(1.05);
@@ -439,6 +444,13 @@ nav {
 	box-shadow: var(--shadow-lg);
 	z-index: 99;
 	transition: all var(--transition-normal);
+}
+
+.cart__icon-img {
+	width: 36px;
+	height: 36px;
+	transform: scaleX(-1);
+	filter: brightness(0) invert(1);
 }
 
 .cart__icon--fixed {
