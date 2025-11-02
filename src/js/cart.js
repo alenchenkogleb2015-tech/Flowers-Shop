@@ -53,14 +53,10 @@ class Cart {
 			const buttonRect = button.getBoundingClientRect();
 			const buttonHeight = buttonRect.height || 32;
 			
-			// Fixed width for controls (32px minus + 60px quantity + 32px plus = 124px total)
-			const controlsWidth = 124;
-			
 			// Create controls container with three blocks
 			controlsContainer = document.createElement('div');
 			controlsContainer.className = 'product-info__controls';
-			controlsContainer.style.width = controlsWidth + 'px';
-			controlsContainer.style.height = buttonHeight + 'px';
+			controlsContainer.style.minHeight = buttonHeight + 'px';
 			controlsContainer.style.flexShrink = '0';
 			controlsContainer.style.flexGrow = '0';
 			
@@ -114,6 +110,14 @@ class Cart {
 			controlsContainer.appendChild(plusBtn);
 			
 			// Replace original button with controls container
+			// Store button's computed styles to match
+			const buttonStyle = window.getComputedStyle(button);
+			controlsContainer.style.margin = buttonStyle.margin;
+			controlsContainer.style.marginTop = buttonStyle.marginTop;
+			controlsContainer.style.marginBottom = buttonStyle.marginBottom;
+			controlsContainer.style.marginLeft = buttonStyle.marginLeft;
+			controlsContainer.style.marginRight = buttonStyle.marginRight;
+			
 			button.style.display = 'none';
 			button.after(controlsContainer);
 			

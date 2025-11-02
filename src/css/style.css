@@ -259,18 +259,19 @@ nav {
 	padding: var(--spacing-lg);
 	flex-grow: 1;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	gap: var(--spacing-lg);
+	flex-direction: column;
+	align-items: stretch;
+	gap: 0;
 	position: relative;
 }
 
 .product-info__content {
 	display: flex;
 	flex-direction: column;
-	flex: 1;
+	width: 100%;
 	min-width: 0;
 	overflow: hidden;
+	flex: 0 1 auto;
 }
 
 .product-info__name {
@@ -286,19 +287,30 @@ nav {
 	font-size: var(--font-size-base);
 	font-weight: 600;
 	color: var(--color-text-secondary);
+	margin-top: var(--spacing-sm);
+	margin-bottom: 0;
+}
+
+.product-info__content + .product-info__btn,
+.product-info__content + .product-info__controls {
+	margin-top: var(--spacing-md);
 }
 
 .product-info__btn {
 	padding: var(--spacing-sm) var(--spacing-md);
 	font-size: var(--font-size-xs);
-	align-self: center;
+	align-self: stretch;
 	flex-shrink: 0;
 	flex-grow: 0;
-	width: 124px;
-	min-width: 124px;
+	width: 100%;
+	min-height: 32px;
+	height: auto;
 	text-align: center;
 	white-space: nowrap;
 	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .product-info__btn:hover:not(.product-info__btn--added) {
@@ -324,11 +336,12 @@ nav {
 	gap: 0;
 	flex-shrink: 0;
 	flex-grow: 0;
-	height: 100%;
 	min-height: 32px;
-	align-self: center;
-	width: 124px;
+	height: auto;
+	align-self: flex-start;
+	width: auto;
 	box-sizing: border-box;
+	justify-content: flex-start;
 }
 
 .product-info__quantity-btn {
@@ -913,7 +926,7 @@ footer {
 
 	nav {
 		max-width: 100%;
-		padding: var(--spacing-md) var(--spacing-md);
+		padding: var(--spacing-md);
 	}
 
 	.catalog__list {
@@ -928,10 +941,50 @@ footer {
 	.contacts__info {
 		flex: 1;
 		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--spacing-lg);
 	}
 
 	.contacts__map {
 		width: 100%;
+	}
+
+	/* Hero section */
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 0;
+	}
+
+	.hero-section__h1 {
+		color: var(--color-text-light);
+	}
+
+	.hero-section__category {
+		color: var(--color-text-light);
+	}
+
+	.hero-section__category::before {
+		background-color: var(--color-text-light);
+	}
+
+	.hero-section__btn.btn {
+		background-color: var(--color-primary);
+		color: var(--color-text-light);
+		border-color: var(--color-primary);
+
+	}
+
+	.hero-section__btn.btn:hover {
+		background-color: var(--color-primary-dark);
+		border-color: var(--color-primary-dark);
+
 	}
 }
 
@@ -943,10 +996,9 @@ footer {
 		padding: var(--spacing-lg) var(--spacing-md);
 	}
 
-	/* Navigation */
 	nav {
 		max-width: 100%;
-		padding: var(--spacing-md) var(--spacing-md);
+		padding: var(--spacing-md);
 	}
 
 	.nav__burger {
@@ -996,24 +1048,6 @@ footer {
 
 	.catalog__list-item img {
 		height: 250px;
-	}
-
-	/* Product info - vertical layout */
-	.product-info {
-		flex-direction: column;
-		align-items: stretch;
-		gap: var(--spacing-md);
-	}
-
-	.product-info__content {
-		width: 100%;
-	}
-
-	.product-info__btn,
-	.product-info__controls {
-		width: 100%;
-		align-self: stretch;
-		justify-content: center;
 	}
 
 	/* Hero section */
@@ -1164,63 +1198,18 @@ footer {
 
 	.product-info {
 		padding: var(--spacing-md);
-		flex-direction: column;
-		align-items: stretch;
-		gap: var(--spacing-sm);
-	}
-
-	.product-info__content {
-		width: 100%;
 	}
 
 	.product-info__name {
 		font-size: var(--font-size-base);
 	}
 
-	.product-info__btn,
-	.product-info__controls {
-		width: 100%;
-		align-self: stretch;
-		justify-content: center;
-	}
-
 	.hero-section {
 		min-height: 400px;
 	}
 
-	.hero-section::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: 0;
-	}
-
 	.hero-section__h1 {
 		font-size: var(--font-size-2xl);
-		color: var(--color-text-light);
-	}
-
-	.hero-section__category {
-		color: var(--color-text-light);
-	}
-
-	.hero-section__category::before {
-		background-color: var(--color-text-light);
-	}
-
-	.hero-section__btn.btn {
-		background-color: var(--color-primary);
-		color: var(--color-text-light);
-		border-color: var(--color-primary);
-	}
-
-	.hero-section__btn.btn:hover {
-		background-color: var(--color-primary-dark);
-		border-color: var(--color-primary-dark);
 	}
 
 	.section {
