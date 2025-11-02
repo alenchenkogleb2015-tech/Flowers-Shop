@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flowers Shop</title>
+		<link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+		<link rel="stylesheet" href="./src/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="#hero" class="nav__logo">
+					<img src="./src/assets/logo.png" alt="FLOWERS SHOP" class="nav__logo-img" />
+					<span class="nav__logo-text">FLOWERS SHOP</span>
+				</a>
+				<button class="nav__burger" id="navBurger" aria-label="Меню">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav_list" id="navList">
+					<li><a href="#hero" class="nav_list-item-link">Главная</a></li>
+					<li><a href="#catalog-menu" class="nav_list-item-link">Каталог</a></li>
+					<li><a href="#contacts" class="nav_list-item-link">Контакты</a></li>
+				</ul>
+				
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<section class="hero-section section" id="hero">
+					<div class="hero-section__content">
+						<div class="hero-section__text">
+							<span class="hero-section__category">FLOWERS SHOP</span>
+							<h1 class="hero-section__h1">Самые свежие цветы здесь</h1>
+							<a href="#catalog-menu" class="hero-section__btn btn">Каталог</a>
+						</div>
+					</div>
+				</section>
+				<section class="catalog-menu section" id="catalog-menu">
+					<h2 class="catalog__title">Каталог</h2>
+					<div class="catalog__list">
+						<a href="#flowers" class="catalog__list-item catalog-menu__item">
+							<img src="./src/assets/flo_1.jpg" width="350" alt="Цветы" />
+							<div class="product-info">
+								<div class="product-info__content">
+									<p class="product-info__name">Цветы</p>
+									<p class="product-info__price">Выберите цветы</p>
+								</div>
+							</div>
+						</a>
+						<a href="#bouquets" class="catalog__list-item catalog-menu__item">
+							<img src="./src/assets/bouquet_1.jpg" width="350" alt="Букеты" />
+							<div class="product-info">
+								<div class="product-info__content">
+									<p class="product-info__name">Букеты</p>
+									<p class="product-info__price">Выберите букет</p>
+								</div>
+							</div>
+						</a>
+						<a href="#baskets" class="catalog__list-item catalog-menu__item">
+							<img src="./src/assets/box_1.jpg" width="350" alt="Корзины" />
+							<div class="product-info">
+								<div class="product-info__content">
+									<p class="product-info__name">Корзины</p>
+									<p class="product-info__price">Выберите корзину</p>
+								</div>
+							</div>
+						</a>
+						<a href="#bride-bouquets" class="catalog__list-item catalog-menu__item">
+							<img src="./src/assets/bride_1.jpg" width="350" alt="Букет невесты" />
+							<div class="product-info">
+								<div class="product-info__content">
+									<p class="product-info__name">Букет невесты</p>
+									<p class="product-info__price">Выберите букет</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</section>
+				<section class="catalog section" id="flowers">
+					<h2 class="catalog__title">Цветы</h2>
+					<div class="catalog__list">
+						<!-- Product cards will be loaded dynamically from products-data.js -->
+					</div>
+				</section>
+				<section class="catalog section" id="bouquets">
+					<h2 class="catalog__title">Букеты</h2>
+					<div class="catalog__list">
+						<!-- Product cards will be loaded dynamically from products-data.js -->
+					</div>
+				</section>
+				<section class="catalog section" id="baskets">
+					<h2 class="catalog__title">Корзины</h2>
+					<div class="catalog__list">
+						<!-- Product cards will be loaded dynamically from products-data.js -->
+					</div>
+				</section>
+				<section class="catalog section" id="bride-bouquets">
+					<h2 class="catalog__title">Букет невесты</h2>
+					<div class="catalog__list">
+						<!-- Product cards will be loaded dynamically from products-data.js -->
+					</div>
+				</section>
+				<section class="contacts section" id="contacts">
+					<h2 class="catalog__title">Контакты</h2>
+					<div class="contacts__content">
+						<div class="contacts__info">
+							<div class="contacts__item">
+								<h3 class="contacts__label">Адрес</h3>
+								<p class="contacts__text">г. Хабаровск, ул. Тихоокеанская, 114/1</p>
+							</div>
+							<div class="contacts__item">
+								<h3 class="contacts__label">Email</h3>
+								<p class="contacts__text">info@flowersshop.ru</p>
+							</div>
+							<div class="contacts__item">
+								<h3 class="contacts__label">Телефон</h3>
+								<p class="contacts__text">+7 (999) 123-45-67</p>
+							</div>
+							<div class="contacts__item">
+								<h3 class="contacts__label">Часы работы</h3>
+								<p class="contacts__text">Пн-Пт: 9:00 - 20:00<br>Сб-Вс: 10:00 - 19:00</p>
+							</div>
+						</div>
+						<div class="contacts__map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5285.570528316133!2d135.04624028646796!3d48.51818101626614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5efac0717d8c83e5%3A0xb1bbc5ec2cd52248!2sAzeriFlores!5e0!3m2!1sru!2sru!4v1762078360018!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="footer__container">
+				<p>&copy; 2025 Flowers Shop. Все права защищены.</p>
+			</div>
+		</footer>
+		<div class="cart" id="cart">
+			<div class="cart__overlay" id="cartOverlay"></div>
+			<div class="cart__sidebar">
+				<div class="cart__header">
+					<h2 class="cart__title">Корзина</h2>
+					<div class="cart__header-actions">
+						<button class="cart__clear" id="cartClear">Очистить</button>
+						<button class="cart__close" id="cartClose">×</button>
+					</div>
+				</div>
+				<div class="cart__items" id="cartItems">
+					<p class="cart__empty">Корзина пуста</p>
+				</div>
+				<div class="cart__footer">
+					<div class="cart__total">
+						<span>Итого:</span>
+						<span id="cartTotal">0$</span>
+					</div>
+					<button class="cart__checkout btn">Оформить заказ</button>
+				</div>
+			</div>
+		</div>
+		<button class="cart__icon" id="cartIcon">
+			<span class="cart__badge" id="cartBadge">0</span>
+			🛒
+		</button>
+		<script src="./src/js/products-data.js"></script>
+		<script src="./src/js/cart.js"></script>
+		<script src="./src/js/catalog-loader.js"></script>
+		<script src="./src/js/main.js"></script>
+	</body>
+</html>

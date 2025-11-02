@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Детали товара - Flowers Shop</title>
+		<link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+		<link rel="stylesheet" href="./src/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="./index.html#hero" class="nav__logo">
+					<img src="./src/assets/logo.png" alt="FLOWERS SHOP" class="nav__logo-img" />
+					<span class="nav__logo-text">FLOWERS SHOP</span>
+				</a>
+				<button class="nav__burger" id="navBurger" aria-label="Меню">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+				<ul class="nav_list" id="navList">
+					<li><a href="./index.html#hero" class="nav_list-item-link">Главная</a></li>
+					<li><a href="./index.html#catalog-menu" class="nav_list-item-link">Каталог</a></li>
+					<li><a href="./index.html#contacts" class="nav_list-item-link">Контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<section class="product-detail section">
+					<div class="product-detail__content product-detail__content-none ">
+						<div class="product-detail__image">
+							<img id="productImage" src="./src/assets/1.jpg" alt="Букет" />
+						</div>
+						<div class="product-detail__info">
+							<h1 class="product-detail__title" id="productName">Розы</h1>
+							<p class="product-detail__price" id="productPrice">100$</p>
+							<div class="product-detail__description">
+								<h3>Описание</h3>
+								<p id="productDescription">Прекрасный букет из свежих роз, который станет идеальным подарком для ваших близких. Цветы отбираются вручную для обеспечения высочайшего качества.</p>
+							</div>
+							<div class="product-detail__features">
+								<h3>Характеристики</h3>
+								<ul>
+									<li>Свежесть гарантирована</li>
+									<li>Доставка в течение 24 часов</li>
+									<li>Экологичная упаковка</li>
+									<li>Возможность персонализации</li>
+								</ul>
+							</div>
+							<div style="display: flex; align-items: center; justify-content: flex-start; gap: var(--spacing-sm);">
+								<button class="product-detail__btn btn product-info__btn" id="addToCartBtn" style="width: auto;">Добавить в корзину</button>
+							</div>
+							<a href="./index.html" class="product-detail__back">← Вернуться к каталогу</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="footer__container">
+				<p>&copy; 2025 Flowers Shop. Все права защищены.</p>
+			</div>
+		</footer>
+		<div class="cart" id="cart">
+			<div class="cart__overlay" id="cartOverlay"></div>
+			<div class="cart__sidebar">
+				<div class="cart__header">
+					<h2 class="cart__title">Корзина</h2>
+					<button class="cart__close" id="cartClose">×</button>
+				</div>
+				<div class="cart__items" id="cartItems">
+					<p class="cart__empty">Корзина пуста</p>
+				</div>
+				<div class="cart__footer">
+					<div class="cart__total">
+						<span>Итого:</span>
+						<span id="cartTotal">0$</span>
+					</div>
+					<button class="cart__checkout btn">Оформить заказ</button>
+				</div>
+			</div>
+		</div>
+		<button class="cart__icon" id="cartIcon">
+			<span class="cart__badge" id="cartBadge">0</span>
+			🛒
+		</button>
+		<script src="./src/js/products-data.js"></script>
+		<script src="./src/js/cart.js"></script>
+		<script src="./src/js/product.js"></script>
+		<script src="./src/js/main.js"></script>
+	</body>
+</html>
