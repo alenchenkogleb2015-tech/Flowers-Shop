@@ -14,11 +14,17 @@
 					<img src="./src/assets/logo.png" alt="FLOWERS SHOP" class="nav__logo-img" />
 					<span class="nav__logo-text">FLOWERS SHOP</span>
 				</a>
-				<button class="nav__burger" id="navBurger" aria-label="Меню">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+				<div class="nav__actions">
+					<button class="nav__cart-icon cart__icon" id="navCartIcon">
+						<span class="cart__badge" id="navCartBadge">0</span>
+						🛒
+					</button>
+					<button class="nav__burger" id="navBurger" aria-label="Меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
 				<ul class="nav_list" id="navList">
 					<li><a href="#hero" class="nav_list-item-link">Главная</a></li>
 					<li><a href="#catalog-menu" class="nav_list-item-link">Каталог</a></li>
@@ -158,7 +164,7 @@
 				</div>
 			</div>
 		</div>
-		<button class="cart__icon" id="cartIcon">
+		<button class="cart__icon cart__icon--fixed" id="cartIcon">
 			<span class="cart__badge" id="cartBadge">0</span>
 			🛒
 		</button>

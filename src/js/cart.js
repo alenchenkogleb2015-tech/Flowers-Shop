@@ -208,6 +208,7 @@ class Cart {
 		const cartItems = document.getElementById('cartItems');
 		const cartTotal = document.getElementById('cartTotal');
 		const cartBadge = document.getElementById('cartBadge');
+		const navCartBadge = document.getElementById('navCartBadge');
 		const cartBadgeHeader = document.getElementById('cartBadgeHeader');
 		const totalItems = this.getTotalItems();
 		const total = this.getTotal();
@@ -215,6 +216,9 @@ class Cart {
 		// Update badges
 		if (cartBadge) {
 			cartBadge.textContent = totalItems || '';
+		}
+		if (navCartBadge) {
+			navCartBadge.textContent = totalItems || '';
 		}
 		if (cartBadgeHeader) {
 			cartBadgeHeader.textContent = totalItems || '';
@@ -258,6 +262,7 @@ class Cart {
 	bindEvents() {
 		// Cart icon buttons
 		const cartIcon = document.getElementById('cartIcon');
+		const navCartIcon = document.getElementById('navCartIcon');
 		const cartIconHeader = document.getElementById('cartIconHeader');
 		const cart = document.getElementById('cart');
 		const cartClose = document.getElementById('cartClose');
@@ -272,6 +277,7 @@ class Cart {
 		};
 
 		if (cartIcon) cartIcon.addEventListener('click', openCart);
+		if (navCartIcon) navCartIcon.addEventListener('click', openCart);
 		if (cartIconHeader) cartIconHeader.addEventListener('click', openCart);
 		if (cartClose) cartClose.addEventListener('click', closeCart);
 		if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
