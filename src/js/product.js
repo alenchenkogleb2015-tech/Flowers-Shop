@@ -1,4 +1,4 @@
-// Product page functionality
+// Функциональность страницы товара
 document.addEventListener('DOMContentLoaded', () => {
 	const urlParams = new URLSearchParams(window.location.search);
 	const productId = urlParams.get('id');
@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		document.getElementById('productImage').alt = product.name;
 		document.getElementById('productDescription').textContent = product.description;
 
-		// Add to cart button
+		// Кнопка «Добавить в корзину»
 		const addToCartBtn = document.getElementById('addToCartBtn');
 		
-		// Store original text
+		// Сохраняем исходный текст кнопки
 		if (!addToCartBtn.dataset.originalText) {
 			addToCartBtn.dataset.originalText = addToCartBtn.textContent.trim();
 		}
 		
-		// Set data attributes for cart functionality
+		// Устанавливаем data-атрибуты для работы корзины
 		addToCartBtn.setAttribute('data-product-id', productId);
 		addToCartBtn.setAttribute('data-product-name', product.name);
 		addToCartBtn.setAttribute('data-product-price', product.price);
@@ -37,12 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			cart.addItem(productData);
 		});
 		
-		// Update button state on page load
+		// Обновляем состояние кнопки после загрузки страницы
 		setTimeout(() => {
 			cart.updateProductButtons();
 		}, 100);
 	} else {
-		// Product not found
+		// Товар не найден
 		document.querySelector('.product-detail').classList.add('product-not-found');
 		document.querySelector('.product-detail__content').innerHTML = `
 			<div class="product-not-found__content">

@@ -4,14 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Детали товара - Flowers Shop</title>
-		<link rel="icon" type="image/png" href="./src/assets/favicon.png" />
+		<link rel="icon" type="image/x-icon" href="./src/assets/favicon.ico" />
 		<link rel="stylesheet" href="./src/css/style.css" />
 	</head>
 	<body>
 		<header>
 			<nav>
 				<a href="./index.html#hero" class="nav__logo">
-					<img src="./src/assets/logo.png" alt="FLOWERS SHOP" class="nav__logo-img" />
+					<img src="./src/assets/logo.svg" alt="FLOWERS SHOP" class="nav__logo-img" />
 					<span class="nav__logo-text">FLOWERS SHOP</span>
 				</a>
 				<div class="nav__actions">
@@ -74,7 +74,10 @@
 			<div class="cart__sidebar">
 				<div class="cart__header">
 					<h2 class="cart__title">Корзина</h2>
-					<button class="cart__close" id="cartClose">×</button>
+					<div class="cart__header-actions">
+						<button class="cart__clear" id="cartClear">Очистить</button>
+						<button class="cart__close" id="cartClose">×</button>
+					</div>
 				</div>
 				<div class="cart__items" id="cartItems">
 					<p class="cart__empty">Корзина пуста</p>
